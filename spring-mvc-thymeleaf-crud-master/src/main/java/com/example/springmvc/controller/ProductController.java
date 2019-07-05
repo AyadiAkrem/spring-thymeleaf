@@ -24,6 +24,11 @@ public class ProductController {
         return "index";
     }
 
+    @RequestMapping(path = "/login")
+    public String login() {
+        return "login";
+    }
+
     @RequestMapping(path = "/products/add", method = RequestMethod.GET)
     public String createProduct(Model model) {
         model.addAttribute("product", new Product());
